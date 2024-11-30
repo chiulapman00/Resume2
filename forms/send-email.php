@@ -5,12 +5,11 @@ $email = $_POST["email"];
 $subject = $_POST["subject"];
 $message = $_POST["message"];
 
-require "vendor/autoload.php";
-
+require dirname(__FILE__).'/vendor/autoload.php';    
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$mail = new PHPMailer(true);
+$mail = new PHPMailer(true); 
 
 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
@@ -21,11 +20,11 @@ $mail->Host = "smtp.example.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "you@example.com";
-$mail->Password = "bzcd qymu eedx otgo";
+$mail->Username = "ericchiu456@gmail.com";
+$mail->Password = "bzcdqymueedxotgo";
 
 $mail->setFrom($email, $name);
-$mail->addAddress("dave@example.com", "Dave");
+$mail->addAddress("ericchiu456@gmail.com", "Eric");
 
 $mail->Subject = $subject;
 $mail->Body = $message;
