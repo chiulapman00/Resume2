@@ -5,10 +5,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/src/Exception.php';
-require 'vendor/src/PHPMailer.php';
-require 'vendor/src/SMTP.php';
-
+require 'assets/vendor/phpmailer/src/Exception.php';
+require 'assets/vendor/phpmailer/src/PHPMailer.php';
+require 'assets/vendor/phpmailer/src/SMTP.php';
 // //Load Composer's autoloader
 // require 'assets/vendor/autoload.php';
 $name = $_POST['name'];
